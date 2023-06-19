@@ -1,0 +1,329 @@
+/*Pagina web*/
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	list-style: none;
+	text-decoration: none;
+}
+
+body{
+	margin: 0;
+	background-color: #ecd3d9;
+	color: #141414;
+}
+
+/*Nav*/
+
+nav{
+	display: flex;
+	justify-content: space-between;
+	padding: 0 15%;
+	height: 75px;
+	line-height: 75px;
+	background: #ecd3d9;
+	color: #992B43;
+}
+
+nav .nav-list{
+	display: flex;
+	margin:0;
+}
+
+nav .nav-list .nav-item{
+	cursor: pointer;
+	height: 100%;
+	padding: 0 30px;
+	transition: .4s;
+}
+
+nav .nav-list .nav-item:hover{
+	color: rgba(255,229,229,1.00);
+	font-weight: bold;
+	background: rgba(153,43,67,0.50);
+}
+
+/*Pantallas 1500px*/
+
+@media (max-width: 1500px){
+	nav{
+		padding: 0 2rem;
+	}
+	
+	nav .nav-list .nav-item{
+		padding: 0 20px;
+	}
+}
+
+/*Pantallas 1000px*/
+
+@media (max-width: 1000px){
+	nav .nav-list{
+		display: grid;
+		position: absolute;
+		background: #ecd3d9;
+		width: 100%;
+		top: 75px;
+		left: 0;
+		transform: translateY(-100%);
+		z-index: -1;
+		transition: .6s;
+	}
+	
+	nav .nav-list .nav-item{
+		padding-left: 35px;
+	}
+	
+	nav .navbar-toggler{
+		display: grid !important;
+	}
+}
+
+
+@media (min-width: 1000px){
+
+	
+	#descripcion .container{
+		display: flex;
+		justify-content: space-evenly;
+	}
+	
+	#descripcion .bienvenido{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 50%;
+		text-align: initial;
+		padding: 0px 30px;
+		max-width: 550px
+	}
+	
+	#descripcion .img-container{
+		background-image: url("media/luana.png");
+		background-size: cover;
+		background-position: center center;
+		height: 471px;
+		width: 295px;		
+	}
+	
+	#opciones .esteticas{
+		display: flex;
+		justify-content: center;
+	}
+	
+	#opciones p{
+		display: block;
+		margin-bottom: 40px;
+	}
+	
+	#opciones .carta{
+		box-shadow: 2px 2px 5px rgba(0,0,0,0.50);
+		background-position: center center;
+		background-size: cover;
+		padding: 35px;
+		margin: 20px;
+		border-radius: 15px;
+	}
+	
+	#opciones h4{
+		padding: 50px;
+	}
+	
+	#ad img{
+		width: 450px;
+	}
+	
+	#carta{
+		
+
+	}
+	
+	#firma {
+		text-align: center;
+	}
+}
+
+
+/*Nav para movil*/
+
+nav .navbar-toggler{
+	display: none;
+	height: min-content;
+	margin: 18px -10px 0 0;
+	cursor: pointer;
+}
+
+nav .navbar-toggler .bar{
+	width: 40px;
+	height: 5px;
+	margin-bottom: 10px;
+	background: #992B43 ;
+	border-radius: 10%;
+	transition: .4s;
+}
+
+input {
+	display: none;
+}
+
+input:checked ~ nav .nav-list{
+	transform: translateY(0);
+}
+
+input:checked ~ nav .navbar-toggler{
+	margin-top: 35px;
+}
+
+input:checked ~ nav .navbar-toggler .bar:nth-child(1){
+	position: absolute;
+	transform: rotate(45deg);
+}
+
+input:checked ~ nav .navbar-toggler .bar:nth-child(2){
+	display: none;
+}
+
+input:checked ~ nav .navbar-toggler .bar:nth-child(3){
+	transform: rotate(-45deg);
+}
+
+/*Banner*/
+
+#hero{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	flex-direction: column;
+	height: 100vh;
+	color: #141414;
+	font-weight: lighter;
+	font-style: italic;
+	background-image:linear-gradient(0deg, rgba(0,0,0,0.50), rgba(0,0,0,0.50))
+			   		 ,url("media/thank_you_card_with_soft_green_floral_border_watercolor.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+/*CSS*/
+
+#descripcion .container{
+	text-align: center;
+	padding: 50px 12px;	
+}
+
+.color-acento {
+	color: #CB4764;
+	font-weight: lighter;
+}
+
+
+
+
+/*Cartas de tratamientos*/
+
+#opciones{
+	background-color: #141414;
+	color: #F3E3E7;
+	text-align: center;
+}
+
+#opciones .container{
+	padding: 100px 0px;
+}
+
+#opciones p{
+	display: none;
+	
+}
+
+#opciones h2{
+	margin-top: 0;
+}
+
+#opciones .carta{
+	background-position: center center;
+	background-size: cover;
+	padding: 35px;
+	margin: 20px;
+	border-radius: 15px;
+}
+
+.carta:first-child{
+	background-image:linear-gradient(0deg, rgba(0,0,0,0.50), rgba(0,0,0,0.50))
+			   		 ,url("media/rostro.jpg");
+}
+
+.carta:nth-child(2){
+	background-image:linear-gradient(0deg, rgba(0,0,0,0.50), rgba(0,0,0,0.50))
+			   		 ,url("media/cuerpo.jpg");
+}
+
+.carta:last-child{
+	background-image:linear-gradient(0deg, rgba(0,0,0,0.50), rgba(0,0,0,0.50))
+			   		 ,url("media/alma.jpg");
+}
+
+/*Publicidad*/
+
+#ad{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 50px 15px 15px;
+}
+
+#ad p{
+	text-align: center;
+	font-size: 15px;
+}
+
+#ad img{
+	width: 270px;
+}
+
+footer .container{
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+#carta {
+	background-color: #f8e1f3;
+	background-size: cover;
+	background-position: center center;
+	color: #CB4764;
+	padding: 100px 50px;
+}
+
+/*Carta de bienvenida*/
+
+#bienvenido{
+	text-align: center;
+	padding: 0px;
+	color: #141414;
+}
+
+#bienvenido2{
+	text-align: center;
+	color: #141414;
+}
+
+.p0 {
+	text-align: center;
+	justify-content: center;
+	color: #141414;	
+}
+
+.p {
+	text-align: justify;
+}
+
+#firma {
+	text-align: center;
+	color: #141414;
+}
